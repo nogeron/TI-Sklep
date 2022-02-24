@@ -7,5 +7,9 @@ namespace TI_Sklep.Test
 {
     public class Class
     {
+        
+        //zmienna imie
+        static string name;
+        
     }
 }
