@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,10 @@ namespace TI_Sklep.Models
     {
         public int Id { get; set; }
 
-        public int Nazwa { get; set; }
-        public int Opis { get; set; }
+       // [Key]
+        public string Nazwa { get; set; }
+        public string Opis { get; set; }
+
+        public ICollection<Film> Filmy { get; set; }
     }
 }
