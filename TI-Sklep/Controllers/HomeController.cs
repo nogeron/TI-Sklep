@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using TI_Sklep.DAL;
 
 namespace TI_Sklep.Controllers
 {

@@ -1,22 +1,15 @@
-﻿@model IEnumerable<TI-Sklep.Models.Kategoria>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TI_Sklep</title>
+    <title>@ViewData["Title"] - Wypożyczalnia filmów</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header class="menu_bar">
-        <div id="menu">
-            @forech (var kategoria in Model)
-    {
-        <a href="#" class="menu_link"> @kategoria.Nazwa</a>
-    }
-            </div>
-    </header>
+    @(await Component.InvokeAsync("Menu"))
+
     <div class="main_page">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -25,14 +18,11 @@
 
     <footer class="stopka">
         <ul>
-        <li><a href="@Url.Action("StronyStatyczne", "Home", new {nazwa="Onas"})">O nas</a></li>
-        <li><a href="@Url.Action("StronyStatyczne", "Home", new {nazwa="Kontakt"})">Kontakt</a></li>
-        <li><a href="@Url.Action("StronyStatyczne", "Home", new {nazwa="Regulamin"})">Regulamin</a></li>
-        <li><a href="@Url.Action("StronyStatyczne", "Home", new {nazwa="MetodyPlatnosci"})">Metody Płatnosci</a></li>
-            </ul>
-        <div class="container">
-            &copy; 2022 - TI_Sklep - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+            <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas"}) ">O nas</a></li>
+            <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin"}) ">>Regulamin</a></li>
+            <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Kontakt"}) ">>Metody Płatności</a></li>
+            <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "MetodyPlatnosci"}) ">>Kontakt</a></li>
+        </ul>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

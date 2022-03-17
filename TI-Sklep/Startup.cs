@@ -52,10 +52,16 @@ namespace TI_Sklep
 
             app.UseEndpoints(endpoints =>
             {
-             endpoints.MapControllerRoute(
+            endpoints.MapControllerRoute(
                     name: "StronyStatyczne",
-                    pattern: "info/{nazwa}.html");
-                    default: new { controller= "Home", acttion = "StronyStatyczne" }
+                    pattern: "info/{nazwa}.html",
+                    defaults: new { controller = "Home", action = "StronyStatyczne" }
+                    );
+
+            endpoints.MapControllerRoute(
+                    name: "Kategoria",
+                    pattern: "kategoria/{nazwa}.html",
+                    defaults: new { controller= "Home", acttion = "Kategoria" }
             );
                 
                 endpoints.MapControllerRoute(

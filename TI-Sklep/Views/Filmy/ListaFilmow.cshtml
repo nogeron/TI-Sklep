@@ -1,0 +1,27 @@
+@model IEnumerable<TI_Sklep.Models.Film>
+    @{
+
+    }
+    <h1>Opis</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tytu³ filmu</th>
+                <th>Re¿yser</th>
+                <th>Data produkcji</th>
+                <th>Cena</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var film in Model)
+            {
+            <tr>
+                <td>@film.Tytul</td>
+                <td>@film.Rezyser</td>
+                <td>@film.DataProdukcji</td>
+                <td>@film.Cena</td>
+            </tr>
+            }
+        </tbody>
+    </table>
