@@ -35,7 +35,7 @@ namespace TI_Sklep.Controllers
            
             var kategoria = db.Kategorie.Find(db.Filmy.Find(idFilmu).KategoriaId);
             var filmy = db.Filmy.Find(idFilmu);
-            return View(film);
+            return View(filmy);
         }
 
         public IActionResult Index()
