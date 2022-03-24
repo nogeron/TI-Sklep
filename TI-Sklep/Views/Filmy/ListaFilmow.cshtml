@@ -1,26 +1,40 @@
-@model IEnumerable<TI_Sklep.Models.Film>
+@model TI_Sklep.ViewModels.KategoriaViewModels
     @{
-
+        ViewData["Title"] = "Lista z Kategorii";
     }
-    <h1>Opis</h1>
+    <h1>@Model.Kategoria.Nazwa - @Model.Kategoria.Opis</h1>
+<table>
+    <tr>
+        @foreach (var film in Model.FilmyTop3Najnowsze)
+        {
+            <td>
+                <h3>@film.Tytul</h3>
+                <p>@film.Opis</p>
+        </td>
+        }
 
+    </tr>
+</table>
     <table>
         <thead>
             <tr>
-                <th>Tytu³ filmu</th>
-                <th>Re¿yser</th>
+                <th>Tytul filmu</th>
+                <th>Rezyser</th>
                 <th>Data produkcji</th>
                 <th>Cena</th>
             </tr>
         </thead>
         <tbody>
-            @foreach(var film in Model)
+            @foreach(var film in Model.FilmyKategorii)
             {
             <tr>
                 <td>@film.Tytul</td>
                 <td>@film.Rezyser</td>
                 <td>@film.DataProdukcji</td>
                 <td>@film.Cena</td>
+                <td>
+                    <a href="@Url.Action("Szczegoly" , "Filmy", new {idFilmu=film.Id })">&#128269;</a>
+                </td>
             </tr>
             }
         </tbody>
