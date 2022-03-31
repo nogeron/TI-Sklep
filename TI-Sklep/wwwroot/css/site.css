@@ -140,3 +140,30 @@ tbody td {
 tfoot th {
     text-align: right;
 }
+img {
+    height: 15rem;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.film {
+    flex: 1;
+}
+
+.pojedynczy-film {
+    list-style-type: none;
+    width: 30%;
+    float: left;
+}
+
+.wszystkie-filmy::after {
+    display: block;
+    content: " ";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+

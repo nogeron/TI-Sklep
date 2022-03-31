@@ -1,0 +1,9 @@
+﻿@model TI_Sklep.ViewModels.DodawanieFilmowViewModels
+
+@using (Html.BeginForm("DodajFilm", "Filmy", FormMethod.Post))
+   {
+    @Html.LabelFor(m => m.Film.Tytul, "Podaj tytuł: ")
+    @Html.TextBoxFor(m => m.Film.Tytul)
+    <br />
+
+    }

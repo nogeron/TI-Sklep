@@ -63,7 +63,8 @@ namespace TI_Sklep.DAL
                       Rezyser = "Marcus Nispel",
                       Opis = "20 sierpnia 1973 roku teksańska policja trafiła do stojącego na uboczu domu Thomasa Hewitta - byłego pracownika lokalnej rzeźni. Na miejscu odkryli rozkładające się zwłoki 33 osób, które zostały zamordowane przez psychopatycznego zabójcę noszącego na twarzy maskę z ludzkiej skóry i posługującego się piłą mechaniczną.",
                       Cena = 10,
-                      DataProdukcji = new DateTime(2020, 5, 4)
+                      DataProdukcji = new DateTime(2020, 5, 4),
+                      Plakat = "teksanska - masakra - pila - mechaniczna.jpg"
                   },
                 new Film()
                 {
@@ -73,7 +74,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Joel Schumacher",
                     Opis = "Mężczyzna dostaje obsesji na punkcie książki, która według niego opisuje i przewiduje jego życie i przyszłość.",
                     Cena = 14,
-                    DataProdukcji = new DateTime(2021, 3, 16)
+                    DataProdukcji = new DateTime(2021, 3, 16),
+                    Plakat = "numer - 23.jpg"
                 },
                 new Film()
                 {
@@ -83,7 +85,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "David Koepp",
                     Opis = "Uznany pisarz przenosi się na prowincję, by w spokoju tworzyć kolejne książki. Wkrótce odwiedzi go tajemniczy mężczyzna, który oskarży Raineya o plagiat.",
                     Cena = 12,
-                    DataProdukcji = new DateTime(2020, 5, 4)
+                    DataProdukcji = new DateTime(2020, 5, 4),
+                    Plakat = "sekretne-okno.jpg"
                 },
                 new Film()
                 {
@@ -93,7 +96,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Peter Jackson",
                     Opis = "Podróż hobbita z Shire i jego ośmiu towarzyszy, której celem jest zniszczenie potężnego pierścienia pożądanego przez Czarnego Władcę - Saurona.",
                     Cena = 20,
-                    DataProdukcji = new DateTime(2020, 5, 4)
+                    DataProdukcji = new DateTime(2020, 5, 4),
+                    Plakat = "wladca-pierscieni-druzyna-pierscienia.jpg"
                 },
                 new Film()
                 {
@@ -103,7 +107,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Robert Schwentke",
                     Opis = "Emerytowani agenci specjalni CIA zostają wrobieni w zamach. By się ratować, muszą reaktywować stary zespół.",
                     Cena = 11,
-                    DataProdukcji = new DateTime(2020, 5, 4)
+                    DataProdukcji = new DateTime(2020, 5, 4),
+                    Plakat = "red.jpg"
                 },
                 new Film()
                 {
@@ -113,7 +118,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Tomasz Sekielski",
                     Opis = "Dziennikarz śledczy rozmawia z dziewięcioma księżmi katolickimi, którzy dopuścili się zbrodni pedofilii i molestowania nieletnich, a także ich ofiarami.",
                     Cena = 0,
-                    DataProdukcji = new DateTime(2021, 4, 4)
+                    DataProdukcji = new DateTime(2021, 4, 4),
+                    Plakat = "tylko-nie-mow-nikomu.jpg"
                 },
                 new Film()
                 {
@@ -123,7 +129,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Neil Burger",
                     Opis = "Wiedeń u progu XX w. Syn rzemieślnika, iluzjonista Eisenheim, wykorzystuje niezwykłe umiejętności, by zdobyć miłość arystokratki, narzeczonej austro-węgierskiego księcia.",
                     Cena = 13,
-                    DataProdukcji = new DateTime(2020, 5, 4)
+                    DataProdukcji = new DateTime(2020, 5, 4),
+                    Plakat = "iluzjonista.jpg"
                 },
                 new Film()
                 {
@@ -133,7 +140,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Vincenzo Natali",
                     Opis = "Grupa osób budzi się w pełnym śmiertelnych pułapek sześcianie. Nieznajomi muszą zacząć współpracować ze sobą, by przeżyć.",
                     Cena = 15,
-                    DataProdukcji = new DateTime(2021, 2, 1)
+                    DataProdukcji = new DateTime(2021, 2, 1),
+                    Plakat = "cube.jpg"
                 },
                 new Film()
                 {
@@ -143,7 +151,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Clive Barker",
                     Opis = "Frank Cotton nabywa tajemniczą kostkę, za pomocą której można przywołać demony z piekła.",
                     Cena = 16,
-                    DataProdukcji = new DateTime(2020, 6, 21)
+                    DataProdukcji = new DateTime(2020, 6, 21),
+                    Plakat = "hellriser.jpg"
                 },
                 new Film()
                 {
@@ -153,7 +162,8 @@ namespace TI_Sklep.DAL
                     Rezyser = "Jonathan Demme",
                     Opis = "Seryjny morderca i inteligentna agentka łączą siły, by znaleźć przestępcę obdzierającego ze skóry swoje ofiary.",
                     Cena = 17,
-                    DataProdukcji = new DateTime(2020, 10, 10)
+                    DataProdukcji = new DateTime(2020, 10, 10),
+                    Plakat = "milczenie-owiec.jpg"
                 }
                 );
 

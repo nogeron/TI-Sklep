@@ -28,5 +28,7 @@ namespace TI_Sklep.Models
 
         public Kategoria Kategoria { get; set; }
 
+        public string Plakat { get; set; }
+
     }
 }
