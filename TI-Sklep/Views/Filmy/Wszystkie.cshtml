@@ -1,8 +1,12 @@
 ﻿@model IEnumerable<TI_Sklep.Models.Film>
 
-<ul>
-    @foreach (var film in Model)
-    {
-    <a href="@Url.Action("Szczegoly" , "Filmy", new {idFilmu=film.Id })"><img src="~/content/@film.Plakat" /></a>
-    }
-</ul>
+<div class="wszystkie-filmy">
+    <ul>
+        @foreach (var film in Model)
+        {
+            <li class="pojedynczy-film">
+                <a href="@Url.Action("Szczegoly" , "Filmy", new {idFilmu=film.Id })"><img src="~/content/@film.Plakat" /></a>
+            </li>
+        }
+    </ul>
+</div>

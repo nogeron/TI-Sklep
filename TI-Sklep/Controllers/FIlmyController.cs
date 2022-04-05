@@ -50,12 +50,12 @@ namespace TI_Sklep.Controllers
         {
             var model = new DodawanieFilmowViewModels();
             model.Kategorie = db.Kategorie.ToList();
-            return View();
+            return View(model);
         }
         [HttpPost]
         public IActionResult DodajFilm(DodawanieFilmowViewModels obj)
         {
-            obj.Film.DatayProdukcji = DateTime.Now;
+            obj.Film.DataProdukcji = DateTime.Now;
             db.Filmy.Add(obj.Film);
             db.SaveChanges();
             return RedirectToAction("Wszystkie");

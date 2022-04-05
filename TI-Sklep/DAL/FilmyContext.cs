@@ -64,7 +64,7 @@ namespace TI_Sklep.DAL
                       Opis = "20 sierpnia 1973 roku teksańska policja trafiła do stojącego na uboczu domu Thomasa Hewitta - byłego pracownika lokalnej rzeźni. Na miejscu odkryli rozkładające się zwłoki 33 osób, które zostały zamordowane przez psychopatycznego zabójcę noszącego na twarzy maskę z ludzkiej skóry i posługującego się piłą mechaniczną.",
                       Cena = 10,
                       DataProdukcji = new DateTime(2020, 5, 4),
-                      Plakat = "teksanska - masakra - pila - mechaniczna.jpg"
+                      Plakat = "teksanska-masakra-pila-mechaniczna.jpg"
                   },
                 new Film()
                 {
@@ -75,7 +75,7 @@ namespace TI_Sklep.DAL
                     Opis = "Mężczyzna dostaje obsesji na punkcie książki, która według niego opisuje i przewiduje jego życie i przyszłość.",
                     Cena = 14,
                     DataProdukcji = new DateTime(2021, 3, 16),
-                    Plakat = "numer - 23.jpg"
+                    Plakat = "numer-23.jpg"
                 },
                 new Film()
                 {
