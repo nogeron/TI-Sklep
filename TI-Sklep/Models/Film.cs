@@ -21,7 +21,7 @@ namespace TI_Sklep.Models
 
         public decimal Cena { get; set; }
 
-        public DateTime? DataProdukcji { get; set; } // ? - zeby pozwolić na brak Daty produkcji
+        public DateTime? DataDodania { get; set; } // ? - zeby pozwolić na brak Daty produkcji
 
         [ForeignKey("Kategoria")]
         public int KategoriaId { get; set; }
@@ -29,6 +29,8 @@ namespace TI_Sklep.Models
         public Kategoria Kategoria { get; set; }
 
         public string Plakat { get; set; }
+
+        public string Dlugosc { get; set; }
 
     }
 }

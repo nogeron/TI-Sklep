@@ -14,6 +14,6 @@ namespace TI_Sklep.ViewModels
 
         public IEnumerable<Film> FilmyTop3Najnowsze { get; set; }
 
-
+        public IEnumerable<Film> FilmyTop3Najdluszsze { get; set; }
     }
 }

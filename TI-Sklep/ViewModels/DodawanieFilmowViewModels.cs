@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,9 @@ namespace TI_Sklep.ViewModels
     public class DodawanieFilmowViewModels
     {
         public Film Film { get; set; }
+        
         public List<Kategoria> Kategorie { get; set; }
+
+        public IFormFile Plakat { get; set; }
     }   
 }
