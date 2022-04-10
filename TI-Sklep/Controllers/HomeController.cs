@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using TI_Sklep.DAL;
+using TI_Sklep.ViewModels;
 
 namespace TI_Sklep.Controllers
 {
@@ -21,8 +23,9 @@ namespace TI_Sklep.Controllers
 
         public IActionResult Index()
         {
-           var kategorie = db.Kategorie.ToList();
-            return View(kategorie);
+            KategoriaViewModels vm = new KategoriaViewModels();
+            vm.FilmyTop3Najdluszsze = db.Filmy.OrderByDescending(f => f.Dlugosc).Take(3);
+            return View(vm);
         }
 
         public IActionResult Privacy()

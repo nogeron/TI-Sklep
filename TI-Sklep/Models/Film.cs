@@ -11,7 +11,7 @@ namespace TI_Sklep.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage ="Nie podana tytułu")]
+        [Required(ErrorMessage ="Nie podano tytułu")]
         public string Tytul { get; set; }
 
         public string Rezyser { get; set; }
@@ -30,7 +30,7 @@ namespace TI_Sklep.Models
 
         public string Plakat { get; set; }
 
-        public string Dlugosc { get; set; }
+        public int? Dlugosc { get; set; }
 
     }
 }

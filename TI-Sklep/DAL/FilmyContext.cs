@@ -65,7 +65,7 @@ namespace TI_Sklep.DAL
                       Cena = 10,
                       DataDodania = new DateTime(2020, 5, 4),
                       Plakat = "teksanska-masakra-pila-mechaniczna.jpg",
-                      Dlugosc = "11"
+                      Dlugosc = 11,
                   },
                 new Film()
                 {
@@ -77,7 +77,7 @@ namespace TI_Sklep.DAL
                     Cena = 14,
                     DataDodania = new DateTime(2021, 3, 16),
                     Plakat = "numer-23.jpg",
-                    Dlugosc = "12"
+                    Dlugosc = 12,
                 },
                 new Film()
                 {
@@ -89,7 +89,7 @@ namespace TI_Sklep.DAL
                     Cena = 12,
                     DataDodania = new DateTime(2020, 5, 4),
                     Plakat = "sekretne-okno.jpg",
-                    Dlugosc = "13"
+                    Dlugosc = 13,
                 },
                 new Film()
                 {
@@ -101,7 +101,7 @@ namespace TI_Sklep.DAL
                     Cena = 20,
                     DataDodania = new DateTime(2020, 5, 4),
                     Plakat = "wladca-pierscieni-druzyna-pierscienia.jpg",
-                    Dlugosc = "114"
+                    Dlugosc = 114,
                 },
                 new Film()
                 {
@@ -113,7 +113,7 @@ namespace TI_Sklep.DAL
                     Cena = 11,
                     DataDodania = new DateTime(2020, 5, 4),
                     Plakat = "red.jpg",
-                    Dlugosc = "15"
+                    Dlugosc = 15,
                 },
                 new Film()
                 {
@@ -125,7 +125,7 @@ namespace TI_Sklep.DAL
                     Cena = 0,
                     DataDodania = new DateTime(2021, 4, 4),
                     Plakat = "tylko-nie-mow-nikomu.jpg",
-                    Dlugosc = "126"
+                    Dlugosc = 126,
                 },
                 new Film()
                 {
@@ -137,7 +137,7 @@ namespace TI_Sklep.DAL
                     Cena = 13,
                     DataDodania = new DateTime(2020, 5, 4),
                     Plakat = "iluzjonista.jpg",
-                    Dlugosc = "27"
+                    Dlugosc = 27,
                 },
                 new Film()
                 {
@@ -149,7 +149,7 @@ namespace TI_Sklep.DAL
                     Cena = 15,
                     DataDodania = new DateTime(2021, 2, 1),
                     Plakat = "cube.jpg",
-                    Dlugosc = "41"
+                    Dlugosc = 41,
                 },
                 new Film()
                 {
@@ -161,7 +161,7 @@ namespace TI_Sklep.DAL
                     Cena = 16,
                     DataDodania = new DateTime(2020, 6, 21),
                     Plakat = "hellriser.jpg",
-                    Dlugosc = "43"
+                    Dlugosc = 43,
                 },
                 new Film()
                 {
@@ -173,7 +173,7 @@ namespace TI_Sklep.DAL
                     Cena = 17,
                     DataDodania = new DateTime(2020, 10, 10),
                     Plakat = "milczenie-owiec.jpg",
-                    Dlugosc = "99"
+                    Dlugosc = 99,
                 }
                 );
 
