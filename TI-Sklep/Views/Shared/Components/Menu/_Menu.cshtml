@@ -10,6 +10,8 @@
             <a href="@Url.Action("ListaFilmow", "Filmy", new { nazwaKategorii = kategoria.Nazwa})" class="menu-link">@kategoria.Nazwa</a>
         }
         <a href="@Url.Action("Wszystkie", "Filmy", new { nazwa = "Wszystkie"})" class="menu-link">Wszystkie</a>
+        <a href="@Url.Action("Index", "Koszyk")" class="menu-link">  &#128717; (@ViewBag.quantity)</a>
+
         @using (Html.BeginForm("Szukaj", "Filmy"))
         {
             <div class="input-group">
