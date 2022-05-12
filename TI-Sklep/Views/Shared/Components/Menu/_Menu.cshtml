@@ -13,7 +13,7 @@
         <a href="@Url.Action("Index", "Koszyk")" class="menu-link">  &#128717; (<span id="cartQuantity">@ViewBag.quantity</span>)</a>
 
         <a href="@Url.Action("Zarejestruj", "Account")" class="menu-link">Rejestracja</a>
-        @if (User.Identity.IsAuthenticated)
+        @if (!User.Identity.IsAuthenticated)
         {
             <a href="@Url.Action("Zaloguj", "Account")" class="menu-link">Logowanie</a>
         }
