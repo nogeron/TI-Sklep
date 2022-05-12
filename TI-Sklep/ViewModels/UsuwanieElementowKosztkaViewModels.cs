@@ -12,5 +12,7 @@ namespace TI_Sklep.ViewModels
         public int Ilosc { get; set; }
 
         public decimal WartoscKoszyka { get; set; }
+
+        public int IloscTotal { get; set; }
     }
 }

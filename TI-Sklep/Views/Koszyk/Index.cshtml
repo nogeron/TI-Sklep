@@ -29,7 +29,8 @@
                     else {
                         $("#ilosc" + response.id).text(response.ilosc);
                     }
-                    $("#cenaCalkowita").text("Razem: " + response.wartoscKoszyka + " zł")
+                    $("#cenaCalkowita").text("Razem: " + response.wartoscKoszyka + " zł");
+                    $("#cartQuantity").text(response.iloscTotal);
                 }
                 );
             }

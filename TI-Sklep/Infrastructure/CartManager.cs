@@ -70,5 +70,11 @@ namespace TI_Sklep.Infrastructure
             }
             SessionHelper.SetObjectAsJson(session, Consts.CartSessionKey, cart);
         }
+        public static int GetCartQuantity(ISession session)
+        {
+            var cart = GetItems(session);
+
+            return cart.Sum(item => item.Ilosc);
+        }
     }
 }

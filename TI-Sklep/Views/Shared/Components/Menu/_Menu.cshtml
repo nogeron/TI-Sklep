@@ -10,7 +10,17 @@
             <a href="@Url.Action("ListaFilmow", "Filmy", new { nazwaKategorii = kategoria.Nazwa})" class="menu-link">@kategoria.Nazwa</a>
         }
         <a href="@Url.Action("Wszystkie", "Filmy", new { nazwa = "Wszystkie"})" class="menu-link">Wszystkie</a>
-        <a href="@Url.Action("Index", "Koszyk")" class="menu-link">  &#128717; (@ViewBag.quantity)</a>
+        <a href="@Url.Action("Index", "Koszyk")" class="menu-link">  &#128717; (<span id="cartQuantity">@ViewBag.quantity</span>)</a>
+
+        <a href="@Url.Action("Zarejestruj", "Account")" class="menu-link">Rejestracja</a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a href="@Url.Action("Zaloguj", "Account")" class="menu-link">Logowanie</a>
+        }
+        else
+        {
+            <a href="@Url.Action("Wyloguj", "Account")" class="menu-link">@User.Identity.Name, Wyloguj</a>
+        }
 
         @using (Html.BeginForm("Szukaj", "Filmy"))
         {

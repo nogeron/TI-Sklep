@@ -39,7 +39,8 @@ namespace TISklep.Controllers
             {
                 Id = id,
                 Ilosc = CartManager.RemovefromCart(HttpContext.Session, id),
-                WartoscKoszyka = CartManager.GetCartValue(HttpContext.Session)
+                WartoscKoszyka = CartManager.GetCartValue(HttpContext.Session),
+                IloscTotal = CartManager.GetCartQuantity(HttpContext.Session)
             };
 
             return Json(model);
