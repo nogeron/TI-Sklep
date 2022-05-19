@@ -1,3 +1,38 @@
-﻿<p>
+﻿@model TI_Sklep.ViewModels.RegisterViewModels
+
+<h1>Logowanie</h1>
+
+<p>
     @ViewBag.message
 </p>
+<p>
+    @Html.ValidationSummary()
+</p>
+
+@using (Html.BeginForm("Zaloguj", "Account", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserName, Html.DisplayNameFor(m => m.UserName))
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+    </div>
+    <p class="alert-warning">
+        @Html.ValidationMessageFor(m => m.UserName)
+    </p>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, Html.DisplayNameFor(m => m.Password))
+        @Html.TextAreaFor(m => m.Password, new { @class = "form-control", type = "password" })
+    </div>
+    <p class="alert-warning">
+        @Html.ValidationMessageFor(m => m.Password)
+    </p>
+    
+    <div class="form-group"><input type="submit" value="Zaloguj" class="btn btn-primary" /></div>
+}
+
+@section Scripts
+{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

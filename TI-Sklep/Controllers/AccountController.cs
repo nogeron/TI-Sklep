@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TI_Sklep.Models.Identity;
+using TI_Sklep.ViewModels;
 
 namespace TI_Sklep.Controllers
 {
@@ -18,32 +19,49 @@ namespace TI_Sklep.Controllers
         this.userManager = userManager;
         this.signInManager = signInManager;
     }
-
-    public async Task<IActionResult> Zarejestruj()
+        [HttpGet]
+        public async Task<IActionResult> Zarejestruj()
+        {
+            return View();
+        }
+        [HttpPost]
+    public async Task<IActionResult> Zarejestruj(RegisterViewModels model)
     {
-        var user = await userManager.FindByNameAsync("TestUser");
-        if (user == null)
-        {
-            AppUser userApp = new AppUser()
-            {
-                UserName = "TestUser",
-                Email = "testc@test.pl",
-                FirstName = "Jan",
-                LastName = "Kowalski",
-                Password ="Test123",
-            };
-            var result = await userManager.CreateAsync(userApp, userApp.Password);
-            ViewBag.message = "Uzytkownik utworzony! \n" + result;
-        }
-        else
-        {
-            ViewBag.message = "Taki Uzytkownik juz istnieje! \n";
-        }
-        return View();
+        if(ModelState.IsValid)
+            { 
+            AppUser user = new AppUser()
+                {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email,
+                UserName = model.UserName,
+                Password = model.Password
+                };
+
+            var result = await userManager.CreateAsync(user, model.Password);
+        
+            if(result.Succeeded)
+                {
+                    ViewBag.message = "Uzytkownik utworzony! \n" + result;
+
+                    await signInManager.SignInAsync(user, false);
+
+                    return RedirectToAction("Index", "Home");
+                }
+            var errorList = result.Errors.ToList();
+            ViewBag.message = string.Join("\n", errorList.Select(e => e.Description));
+            }
+            return View(model);
     }
+        [HttpGet]
         public async Task<IActionResult> Zaloguj()
         {
-            var result = await signInManager.PasswordSignInAsync("TestUser", "Test123",false, false);
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Zaloguj(LoginViewModels model)
+        {
+            var result = await signInManager.PasswordSignInAsync(model.UserName, model.Password,false, false);
 
             if(result.Succeeded)
             {
@@ -52,6 +70,7 @@ namespace TI_Sklep.Controllers
             else
             {
                 ViewBag.message = result;
+                ModelState.AddModelError("", "Nieudana próba logowania");
             }
 
             return View();
